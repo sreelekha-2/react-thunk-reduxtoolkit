@@ -1,6 +1,11 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { increment, decrement, incrementByAmount } from './counterReducer';
+import {
+  increment,
+  decrement,
+  incrementByAmount,
+  getUsers,
+} from './counterReducer';
 
 export default function Counter() {
   const count = useSelector((state) => {
@@ -17,6 +22,7 @@ export default function Counter() {
       <button onClick={() => dispatch(incrementByAmount(10))}>
         Increase By Amount
       </button>
+      <button onClick={() => dispatch(getUsers())}>Get Users</button>
     </div>
   );
 }
