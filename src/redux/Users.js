@@ -9,7 +9,7 @@ export default function Users() {
       <h2>User Data</h2>
       <ul>
         {users.map((user) => (
-          <li>
+          <li key={user.id}>
             <h2>{user.name}</h2>
             <p>{user.email}</p>
           </li>

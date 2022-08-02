@@ -14,7 +14,7 @@ export default function Posts() {
       <h1>Posts Component</h1>
       <ul>
         {posts.map((post) => (
-          <li>
+          <li key={post.id}>
             <h2>{post.title}</h2>
             <p>{post.body}</p>
           </li>
